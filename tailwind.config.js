@@ -7,6 +7,8 @@ module.exports = {
             'eucalyptus': '#44FFA1',
             'davys-grey': '#584D62',
             'ghost-white': '#FCF8FF',
+            'light-grey': '#E5E5E5',
+            'white': '#FFFFFF'
         },
       extend: {
         fontFamily: {

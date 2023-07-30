@@ -3,20 +3,46 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: Fraunces;
-    src: url("assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
-}
-
-@font-face {
     font-family: Manrope;
-    src: url("assets/fonts/manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+    src: url("assets/fonts/manrope/Manrope-VariableFont_wght.ttf") format("truetype-variations");
+}
+.curved-bottom {
+    position: relative;
+    min-height: 380px;
+    @apply bg-dark-purple;
 }
 
+.perks-curved-bottom {
+    position: relative;
+    min-height: 380px;
+    @apply bg-ghost-white;
+}
+
+.curved-bottom::after {
+    content: "";
+    display: block;
+    border-radius: 0 0 100% 100%;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    height: 50px;
+    @apply bg-dark-purple;
+}
+.perks-curved-bottom::after {
+    content: "";
+    display: block;
+    border-radius: 0 0 100% 100%;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    height: 50px;
+    @apply bg-ghost-white;
+}
 h1,h2,h3,h4,h5,h6 {
     @apply font-fraunces font-semibold
 }
 h1 {
-    @apply text-[80px] leading-[80px] text-dark-purple;
+    @apply text-[50px] leading-[50px] sm:text-[80px] sm:leading-[80px];
 }
 
 h2,h3 {
@@ -29,4 +55,8 @@ h4,h5,h6 {
 
 body {
     @apply font-manrope font-normal text-lg leading-8 text-dark-purple;
+}
+
+div{
+    @apply px-4;
 }
